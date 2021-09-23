@@ -1,6 +1,6 @@
-package com.workshop1;
+package com.bridgelab.tictactoe;
 
-public class TicTacToe {
+public class TicTacToeGame {
 
 		    static char[] board = new char[10]; // board size 10
 		    public static void main(String[] args) {

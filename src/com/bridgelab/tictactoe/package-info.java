@@ -5,4 +5,4 @@
  * @author shivani
  *
  */
-package com.workshop1;
+package com.bridgelab.tictactoe;
