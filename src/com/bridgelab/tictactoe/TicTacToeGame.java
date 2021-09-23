@@ -11,11 +11,10 @@ public class TicTacToeGame {
         System.out.println("Welcome to the Tic Tac Toe Game");
         System.out.println("Select the Letter you wanted \n  Press 1 . Choose X \n  Press 2 . Choose O\n\nEnter your Choice : ");
         int choice = scan.nextInt();
+
         createBoard();
         allowPlayer(choice);
-        showBoard();
-        choicesLocation();
-        move();
+        choicesToss();
         scan.close();
     }
 
@@ -135,6 +134,22 @@ public class TicTacToeGame {
             }
         }
         showBoard();
+    }
+        static void choicesToss(){
+        int win = (int) Math.floor(Math.random() * 10) % 2;
+        System.out.println("Choose\n 0. Heads\n 1. Tails\nEnter you choice [0-1] : ");
+        Scanner sc = new Scanner(System.in);
+        int tossChoices = sc.nextInt();
+        if (tossChoices == win) {
+            System.out.println("Player won the toss, enter your first Move");
+            choicesLocation();
+            move();
+        } else {
+            System.out.println("Computer won the toss, enter your first move");
+            move();
+            choicesLocation();
+        }
+    }
 
 }
-}
+
